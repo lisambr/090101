@@ -1,0 +1,31 @@
+body{
+    background-color: white;
+    font-family: verdana;
+}
+
+main{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+}
+
+article {
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    border: none;
+}
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 1rem;
+}
+
+ol, ul{
+    list-style-type: none;
+}
