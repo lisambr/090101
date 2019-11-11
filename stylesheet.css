@@ -8,6 +8,7 @@
     --dblue: #182640;
     --slblue: #849aa6;
     --mlblue: #6c8694;
+    --sllblue: #c7dde9;
 }
 
 body {
@@ -39,6 +40,7 @@ header {
 html {
     scroll-behavior: smooth;
 }
+
 /*NAVBAR SETTINGS*/
 
 nav {
@@ -133,8 +135,8 @@ img {
 }
 
 article {
-    background-color: lightgray;
-    color: white;
+    background-color: whitesmoke;
+    color: var(--grey);
     background-image: url(assets/extras/wood.jpeg);
     border-radius: .5rem;
     display: flex;
@@ -150,4 +152,28 @@ article {
 img {
     max-width: 100%;
     height: auto;
+}
+
+.boxInfo {
+    background-color: white;
+    color: var(--grey);
+    padding: 1rem;
+    margin: .2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: .5rem;
+}
+
+.ticketBox{
+    background-color: var(--slblue);
+    color: whitesmoke;
+    padding: 1rem;
+    margin: .2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: .5rem;
+}
+
+.ticketBox:hover{
+    background-color: var(--mlblue);
 }
