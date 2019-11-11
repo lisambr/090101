@@ -1,3 +1,5 @@
+/*MAIN SETUPS FOR PAGE*/
+
 :root {
     --grey: #2b2e34;
     --green: #075226;
@@ -5,7 +7,6 @@
     --lblue: #07354e;
     --dblue: #182640;
 }
-
 
 body {
 
@@ -17,16 +18,7 @@ main {
     grid-gap: 1rem;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
-
-article {
-    border-radius: .5rem;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 1rem;
-    border: none;
-}
-
+/*NAVBAR SETTINGS*/
 
 nav {
     display: flex;
@@ -35,19 +27,6 @@ nav {
     padding: 1rem;
     text-align: center;
 }
-
-ol,
-ul {
-    list-style-type: none;
-}
-
-
-
-img {
-    height: auto;
-    width: auto;
-}
-
 
 
 /* Dropdown Button */
@@ -107,4 +86,28 @@ img {
     margin-right: 16px;
     font-size: 17px;
 }
+
+/*OTHERS NEEDS TO BE CLASSED*/
+ol,
+ul {
+    list-style-type: none;
+}
+
+
+article {
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    border: none;
+}
+
+
+
+img {
+    height: auto;
+    width: auto;
+}
+
 
