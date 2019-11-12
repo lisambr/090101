@@ -45,3 +45,43 @@ function getProducts() {
             data.forEach(showDish)
         })
 }
+
+function showDish(dish) {
+    console.log(dish)
+    const template = document.querySelector("template").content;
+    const copy = template.cloneNode(true);
+
+    copy.querySelector(".data_name").textContent = dish.name;
+
+    if(dish.alcohol){
+        copy.querySelector(".containsAlcohol").textContent = `${dish.alcohol}% Alcohol`;
+    }else{
+        copy.querySelector(".containsAlcohol").remove();
+    }
+    copy.querySelector(".shadow").src = `assets/imgs/medium/${dish.image}-md.jpg`;
+
+    copy.querySelector(".data_price").textContent = `${dish.price},-- DKK`;
+    if (dish.discount) {
+        copy.querySelector(".data_price").classList.add("discount");
+        copy.querySelector(".data_discount").textContent = `${Math.round(dish.price - dish.discount / 100 * dish.price)},-- DKK`
+    } else {
+        copy.querySelector(".data_discount").remove();
+    }
+
+    if (dish.soldout) {
+
+    } else {
+        copy.querySelector(".imgSoldout").remove()
+    }
+    copy.querySelector("button").addEventListener("click", () => {
+        fetch(`https://kea-alt-del.dk/t5/api/product?id=${dish.id}`)
+            .then(res => res.json())
+            .then(showDetails);
+    });
+
+
+
+    document.querySelector(`#${dish.category}`).appendChild(copy);
+
+}
+
