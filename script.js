@@ -1,5 +1,3 @@
-
-
 //1 loop
 
 //eventElements.forEach(showElements)
