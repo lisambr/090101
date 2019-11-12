@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,59 +10,49 @@
 
 <body>
     <header>
-        <h1>CONCERTS</h1>
+       <div class="logodiv">
+        <img src="/supports/logoblue.png" alt="HUSET" class="logo"></div>
+        <nav>
+            <div class="dropdown">
+                <button class="dropbtn"><a class="dropbtn" href="index.html">HOME</a></button>
+
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">EVENTS</button>
+                <div class="dropdown-content">
+                    <a href="/comingup.html">Upcoming</a>
+                    <a href="/genre.html">By Genre</a>
+                    <a href="/venue.html">By Venue</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">ABOUT</button>
+                <div class="dropdown-content">
+                    <a href="/huset.html">Huset KBH</a>
+                    <a href="/jobs.html">Work</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn"><a class="dropbtn" href="index.html">CALENDAR</a></button>
+            </div>
+        </nav>
+        <div>
+        <input type="text" placeholder="Search..">
+        </div>
     </header>
-    <nav>
-        <ol>
-            <li class="navFilter">Genre</li>
-            <li class="navFilter">Date</li>
-            <li class="navFilter">Venue</li>
-        </ol>
-        <ul>
-            <li>Alternative</li>
-            <li>Electronic</li>
-            <li>Folk</li>
-            <li>Improvisation</li>
-            <li>Jazz</li>
-            <li>Pop</li>
-            <li>Rock</li>
-            <li>World</li>
-        </ul>
-    </nav>
-    <input type="text" placeholder="Search..">
-    <div class="navbar">
-        <div class="dropdown">
-            <button class="dropbtn">HOME</button>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">EVENTS</button>
-            <div class="dropdown-content">
-                <a href="#">Upcoming</a>
-                <a href="#">By Genre</a>
-                <a href="#">By Venue</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">ABOUT US</button>
-            <div class="dropdown-content">
-                <a href="#">Huset KBH</a>
-                <a href="#">Work</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">CALENDAR</button>
-        </div>
-    </div>
     <main>
+       <h1 class="title">Events Coming Up</h1>
         <template>
-            <article class="container">
+             <article class="container">
                 <h2>EVENT TITLE</h2>
-                <p1>GENRE</p1>
-                <p2>DATE</p2>
-                <p3>VENUE</p3>
-                <h5>RECAP RECAP RECAP</h5>
-                <img src="KP.jpg" alt="Dog Image" class="data-img">
-                <p4>GET TICKETS</p4>
+                <div class="mainInfo">
+                <p1 class="boxInfo">GENRE</p1>
+                <p2 class="boxInfo">DATE</p2>
+                <p3 class="boxInfo">VENUE</p3></div>
+                <h5>This is going to be a lot of text which will recap stuff. So much content about things and about events etc.</h5>
+
+                <img src="/supports/KP.jpg" alt="default img" class="data-img">
+                <p4 class="ticketBox">GET TICKETS</p4>
             </article>
         </template>
     </main>

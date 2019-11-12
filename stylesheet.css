@@ -185,3 +185,7 @@ ol,
 ul {
     list-style-type: none;
 }
+
+.title{
+    text-align: center;
+}
