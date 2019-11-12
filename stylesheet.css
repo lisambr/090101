@@ -147,7 +147,7 @@ img {
     border-radius: .5rem;
 }
 
-.ticketBox{
+.ticketBox {
     background-color: var(--slblue);
     color: whitesmoke;
     padding: 1rem;
@@ -157,16 +157,16 @@ img {
     border-radius: .5rem;
 }
 
-.ticketBox:hover{
+.ticketBox:hover {
     background-color: var(--mlblue);
 }
 
 /*ARTICLE STYLING CALENDAR*/
-.conatainerCalendar{
+.conatainerCalendar {
     margin: 1rem;
 }
 
-.ticketBoxCalendar{
+.ticketBoxCalendar {
     background-color: var(--slblue);
     color: whitesmoke;
     padding: .5rem;
@@ -176,9 +176,10 @@ img {
     border-radius: .5rem;
 }
 
-.ticketBoxCalendar:hover{
+.ticketBoxCalendar:hover {
     background-color: var(--mlblue);
 }
+
 /*OTHERS NEEDS TO BE CLASSED*/
 
 ol,
@@ -186,6 +187,35 @@ ul {
     list-style-type: none;
 }
 
-.title{
+li {
+    background-color: var(--slblue);
+    color: whitesmoke;
+    margin: .1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: .1rem;
+    text-align: center;
+}
+
+li:hover {
+    background-color: var(--mlblue);
+}
+
+p {
+    padding: .4rem;
+}
+
+.neck {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.title {
     text-align: center;
 }
