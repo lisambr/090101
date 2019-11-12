@@ -110,25 +110,8 @@ nav {
     font-size: 17px;
 }
 
-/*OTHERS NEEDS TO BE CLASSED*/
 
-ol,
-ul {
-    list-style-type: none;
-}
-
-
-article {
-    border-radius: .5rem;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 1rem;
-    border: none;
-}
-
-
-
+/*ARTICLE STYLING*/
 img {
     height: auto;
     width: auto;
@@ -176,4 +159,29 @@ img {
 
 .ticketBox:hover{
     background-color: var(--mlblue);
+}
+
+/*ARTICLE STYLING CALENDAR*/
+.conatainerCalendar{
+    margin: 1rem;
+}
+
+.ticketBoxCalendar{
+    background-color: var(--slblue);
+    color: whitesmoke;
+    padding: .5rem;
+    margin: .2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: .5rem;
+}
+
+.ticketBoxCalendar:hover{
+    background-color: var(--mlblue);
+}
+/*OTHERS NEEDS TO BE CLASSED*/
+
+ol,
+ul {
+    list-style-type: none;
 }
