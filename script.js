@@ -1,4 +1,4 @@
-showElements()
+/*showElements()
 
 function showElements(jsElement) {
     console.log('working')
@@ -14,6 +14,7 @@ function showElements(jsElement) {
 }
 
 //window.addEventListener("DOMContentLoaded", init);
+*/
 
 //1 FETCH data from database
 function getFrontpageData() {
@@ -39,3 +40,4 @@ function showPost(post) {
     //4 APPEND
     document.querySelector("#music").appendChild(postCopy)
 }
+
