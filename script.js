@@ -2,9 +2,27 @@ window.addEventListener("DOMContentLoaded", init);
 
 //1 FETCH data from database
 function getFrontpageData() {
-    //console.log("getFrontpageData")
-
     fetch("http://iesdesigner.eu/wordpress/wp-json/wp/v2/music?_embed")
         .then(res => res.json())
         .then(handleData)
+}
+
+//2 LOOP data
+function handleData(myData) {
+    myData.forEach(showPost)
+}
+
+//3 CLONE data
+function showPost(post) {
+    //Clone it
+    const template = document.querySelector(".myTemplate").content;
+
+    const a = postCopy.querySelector("a");
+    a.href = "sub.html?id=" + post.id;
+
+    const p1 = postCopy.querySelector("p1");
+    p1.innerHTML = post.event_date
+
+//4 APPEND
+    document.querySelector("#music").appendChild(postCopy)
 }
