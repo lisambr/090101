@@ -13,7 +13,6 @@ function showElements(jsElement) {
 
 }
 
-
 //window.addEventListener("DOMContentLoaded", init);
 
 //1 FETCH data from database
