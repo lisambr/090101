@@ -137,7 +137,7 @@ img {
     height: auto;
 }
 
-.boxInfo {
+.boxInfo1, .boxInfo2, .boxInfo3 {
     background-color: white;
     color: var(--grey);
     padding: 1rem;
