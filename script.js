@@ -41,3 +41,4 @@ function showPost(post) {
     document.querySelector("#music").appendChild(postCopy)
 }
 
+
