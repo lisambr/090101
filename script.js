@@ -14,14 +14,9 @@ function handleData(myData) {
 
 //3 CLONE data
 function showPost(post) {
-    //Clone it
     const template = document.querySelector(".myTemplate").content;
+    const postCopy = template.cloneNode(true);
 
-    const a = postCopy.querySelector("a");
-    a.href = "sub.html?id=" + post.id;
-
-    const p1 = postCopy.querySelector("p1");
-    p1.innerHTML = post.event_date
 
 //4 APPEND
     document.querySelector("#music").appendChild(postCopy)
