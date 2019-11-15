@@ -3,10 +3,11 @@ window.addEventListener("DOMContentLoaded", getFrontpageData);
 
 //1 FETCH data from database
 
-function getFrontpageData(){
-	fetch("http://iesdesigner.eu/wordpress/wp-json/wp/v2/music?_embed")
-	.then(res=>res.json())
-	.then(handleData)}
+function getFrontpageData() {
+    fetch("http://iesdesigner.eu/wordpress/wp-json/wp/v2/music?_embed")
+        .then(res => res.json())
+        .then(handleData)
+}
 
 //2 LOOP data
 function handleData(myData) {
@@ -20,9 +21,9 @@ function showPost(post) {
     //3B CHANGE Stuff
     //--- Change IMG
     const imgPath = post.poster.guid;
-	const img = postCopy.querySelector("img");
-	img.setAttribute("src", imgPath)
-	img.setAttribute("alt", "Poster of the movie " + post.title.rendered)
+    const img = postCopy.querySelector("img");
+    img.setAttribute("src", imgPath)
+    img.setAttribute("alt", "Poster of the movie " + post.title.rendered)
 
     //--- Change H1
     const h1 = postCopy.querySelector("h1");
@@ -36,9 +37,11 @@ function showPost(post) {
     const p2 = postCopy.querySelector("p2");
     p2.innerHTML = post.event_date;
 
-       //--- Change P3 ATTTENTION FIND PATH replace XXXX
+    //--- Change P3 ATTTENTION FIND PATH replace XXXX
     const p3 = postCopy.querySelector("p3");
     p3.innerHTML = post.venueid.post_title;
+
+    //--- Change H5
 
     const h5 = postCopy.querySelector("h5");
     h5.innerHTML = post.content.rendered;
@@ -46,3 +49,30 @@ function showPost(post) {
     //4 APPEND
     document.querySelector("#music").appendChild(postCopy)
 }
+
+/*
+function getGenre() {
+    fetch("http://iesdesigner.eu/wordpress/wp-json/wp/v2/music?_embed&per_page=100")
+        .then(res => res.json())
+        .then(handleGenre)
+}
+
+function handleGenre(myGenre) {
+    myGenre.forEach(showTheGenre)
+}
+
+function showTheGenre() {
+    const url_string = (window.location.href).toLowerCase();
+    const url = new URL(url_string);
+    const id = url.searchParams.get("id");
+    console.log(id);
+
+    function appendIngenre() {
+        post.genre.forEach(a => {
+            if (parseInt(a) === parseInt(id))
+                document.querySelector("#music").appendChild(postCopy);
+        })
+    }
+    appendIngenre()
+}
+*/
