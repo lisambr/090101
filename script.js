@@ -37,8 +37,8 @@ function showPost(post) {
     p2.innerHTML = post.event_date;
 
        //--- Change P3 ATTTENTION FIND PATH replace XXXX
-    /*const p2 = postCopy.querySelector("p2");
-    p2.innerHTML = post.event_date;*/
+    const p3 = postCopy.querySelector("p3");
+    p3.innerHTML = post.venueid.post_title;
 
     const h5 = postCopy.querySelector("h5");
     h5.innerHTML = post.content.rendered;
