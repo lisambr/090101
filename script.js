@@ -36,6 +36,13 @@ function showPost(post) {
     const p2 = postCopy.querySelector("p2");
     p2.innerHTML = post.event_date;
 
+       //--- Change P3 ATTTENTION FIND PATH replace XXXX
+    /*const p2 = postCopy.querySelector("p2");
+    p2.innerHTML = post.event_date;*/
+
+    const h5 = postCopy.querySelector("h5");
+    h5.innerHTML = post.content.rendered;
+
     //4 APPEND
     document.querySelector("#music").appendChild(postCopy)
 }
