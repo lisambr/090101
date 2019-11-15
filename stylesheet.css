@@ -16,7 +16,7 @@ body {
     font-family: avenir next;
 }
 
-main {
+section {
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -101,16 +101,6 @@ nav {
     background-color: var(--mlblue);
 }
 
-/* Style the search box inside the navigation bar */
-.input[type=text] {
-    float: right;
-    padding: 6px;
-    border: none;
-    margin-top: 8px;
-    margin-right: 16px;
-    font-size: 17px;
-}
-
 
 /*ARTICLE STYLING*/
 img {
@@ -143,7 +133,7 @@ img {
     color: var(--grey);
     padding: 1rem;
     margin: .2rem;
-    font-size: 1rem;
+    font-size: .5rem;
     border: none;
     border-radius: .5rem;
 }
