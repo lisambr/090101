@@ -1,64 +1,3 @@
-/*showElements()
-
-function showElements(jsElement) {
-    console.log('working')
-    //2 clone template
-    const template = document.querySelector("template").content;
-    const myCopy = template.cloneNode(true);
-    //3 change data
-
-    //4 append
-    const parentElement = document.querySelector("main");
-    parentElement.appendChild(myCopy);
-
-}
-
-//window.addEventListener("DOMContentLoaded", init);
-
-
-//1 FETCH data from database
-function getFrontpageData() {
-    fetch("http://iesdesigner.eu/wordpress/wp-json/wp/v2/music?_embed")
-        .then(res => res.json())
-        .then(handleData)
-}
-
-//2 LOOP data
-function handleData(myData) {
-    myData.forEach(showPost)
-}
-
-//3A CLONE data
-function showPost(post) {
-    const template = document.querySelector(".myTemplate").content;
-    const postCopy = template.cloneNode(true);
-    //3B CHANGE Stuff
-
-    const h1 = postCopy.querySelector("h1");
-    h1.textContent = post.title.rendered;
-
-    //4 APPEND
-    document.querySelector("#music").appendChild(postCopy)
-}
-*/
-
-// JavaScript Document
-
-/*showElements()
-
-function showElements(jsElement) {
-    console.log('working')
-    //2 clone template
-    const template = document.querySelector("template").content;
-    const myCopy = template.cloneNode(true);
-    //3 change data
-
-    //4 append
-    const parentElement = document.querySelector("main");
-    parentElement.appendChild(myCopy);
-
-}
-*/
 window.addEventListener("DOMContentLoaded", getFrontpageData);
 
 
@@ -68,31 +7,34 @@ function getFrontpageData(){
 	fetch("http://iesdesigner.eu/wordpress/wp-json/wp/v2/music?_embed")
 	.then(res=>res.json())
 	.then(handleData)}
-function handleData(myData){
-	myData.forEach(showPost)
-}
 
 //2 LOOP data
 function handleData(myData) {
     myData.forEach(showPost)
-
-
 }
-
-
 
 //3A CLONE data
 function showPost(post) {
     const template = document.querySelector(".myTemplate").content;
     const postCopy = template.cloneNode(true);
+    //3B CHANGE Stuff
+    //--- Change IMG
     const imgPath = post.poster.guid;
 	const img = postCopy.querySelector("img");
 	img.setAttribute("src", imgPath)
 	img.setAttribute("alt", "Poster of the movie " + post.title.rendered)
-    //3B CHANGE Stuff
 
+    //--- Change H1
     const h1 = postCopy.querySelector("h1");
     h1.textContent = post.title.rendered;
+
+    //--- Change P1 ATTTENTION FIND PATH replace XXXX
+    /*const p1 = postCopy.querySelector("p1");
+    p1.textContent = post.title.XXXXXXX;*/
+
+    //--- Change P2
+    const p2 = postCopy.querySelector("p2");
+    p2.innerHTML = post.event_date;
 
     //4 APPEND
     document.querySelector("#music").appendChild(postCopy)
