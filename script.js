@@ -26,11 +26,11 @@ function showPost(post) {
 
     //--- Change H1
     const h1 = postCopy.querySelector("h1");
-    h1.textContent = post.title.rendered;
+    h1.innerHTML = post.title.rendered;
 
     //--- Change P1 ATTTENTION FIND PATH replace XXXX
-    /*const p1 = postCopy.querySelector("p1");
-    p1.textContent = post.title.XXXXXXX;*/
+    const p1 = postCopy.querySelector("p1");
+    p1.innerHTML = post.genre;
 
     //--- Change P2
     const p2 = postCopy.querySelector("p2");
