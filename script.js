@@ -76,10 +76,7 @@ function handleData(myData){
 function handleData(myData) {
     myData.forEach(showPost)
 
-    const imgPath = post.poster.guid;
-	const img = postCopy.querySelector("img");
-	img.setAttribute("src", imgPath)
-	img.setAttribute("alt", "Poster of the movie " + post.title.rendered)
+
 }
 
 
@@ -88,6 +85,10 @@ function handleData(myData) {
 function showPost(post) {
     const template = document.querySelector(".myTemplate").content;
     const postCopy = template.cloneNode(true);
+    const imgPath = post.poster.guid;
+	const img = postCopy.querySelector("img");
+	img.setAttribute("src", imgPath)
+	img.setAttribute("alt", "Poster of the movie " + post.title.rendered)
     //3B CHANGE Stuff
 
     const h1 = postCopy.querySelector("h1");
